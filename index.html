@@ -4,12 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Emissions Tracker</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        header h1 {
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between buttons */
+            margin-top: 20px;
+        }
+
+        .response-button {
+            width: 350px;
+            height: 250px;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>CARBON EMISSION TRACKER</h1>
     </header>
-<p>Manejaste a la escuela?</p>
-<button style="width: 350px; height: 250px; font-size: 30px;">SI</button>
-<button2 style="width: 350px; height: 250px; font-size: 30px;">NO!</button2>
+
+    <p>Manejaste a la escuela?</p>
+    <div class="button-container">
+        <button class="response-button" onclick="trackResponse('SI')">SI</button>
+        <button class="response-button" onclick="trackResponse('NO')">NO!</button>
+    </div>
+
+    <script>
+        function trackResponse(answer) {
+            console.log('Respuesta seleccionada:', answer);
+            // Here you can add code to send the answer to a server or store it locally
+        }
+    </script>
+</body>
 </html>
